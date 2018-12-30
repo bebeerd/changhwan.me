@@ -1,0 +1,16 @@
+<div class="nav-link">
+
+{% if page.next.url %}
+    <a class="link next" href="{{page.next.url}}">
+        &laquo; 
+        {{page.next.title}}
+    </a>
+{% endif %}
+
+{% if page.previous.url %}
+    <a class="link prev" href="{{page.previous.url}}">
+        {{page.previous.title}}
+        &raquo;
+    </a>
+{% endif %}
+</div>

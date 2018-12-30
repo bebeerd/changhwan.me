@@ -1,0 +1,45 @@
+<section class="nav-list">
+    <!-- <h2>Things I have written.</h2> -->
+    {% assign year = 9999 %}
+    {% assign month = 'Start Month' %}
+    {% for post in site.posts %}
+        {% assign current = false %}
+        {% if post == page %}
+            {% assign current = true %}
+        {% endif %}
+
+        {% assign current_year = post.date | date: "%Y" %}
+        {% assign current_month = post.date | date: "%B" %}
+
+        {% if year != current_year or month != current_month %}
+            <div class="title">
+            {% if year != current_year %}
+                {% assign year = current_year %}
+                {% assign month = 'No Month' %}
+                <h3 class="year">{{ year }}</h3>
+            {% endif %}
+
+            {% if month != current_month %}
+                {% assign month = current_month %}
+                <h3 class="month">{{ month }}</h3>
+            {% endif %}
+            </div>
+        {% endif %}
+
+        <a href="{{ post.url }}" class="link {% if current %}active{% endif %}">
+            <span class="title">
+                {{ post.title }}
+            </span>
+            <span class="spacer"></span>
+            <span class="date">
+                {% assign d = post.date | date: "%-d"  %}
+                {% case d %}
+                    {% when '1' or '21' or '31' %}{{ d }}st
+                    {% when '2' or '22' %}{{ d }}nd
+                    {% when '3' or '23' %}{{ d }}rd
+                    {% else %}{{ d }}th
+                {% endcase %}
+            </span>
+        </a>
+    {% endfor %}
+</section>

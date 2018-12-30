@@ -1,0 +1,9 @@
+<!-- _includes/youtube.html -->
+{% assign video_width = include.width | default: 560 %}
+{% assign video_height = include.height | default: 315 %}
+{% assign ratio = video_height | times: 100.0 | divided_by: video_width | append: '%' %}
+
+
+<div style="width: 100%; padding-top: {{ ratio }}; position: relative;">
+<iframe width="{{ video_width }}" height="{{ video_height }}" src="{{ include.url }}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"></iframe>
+</div>

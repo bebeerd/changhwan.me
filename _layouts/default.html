@@ -1,0 +1,77 @@
+---
+layout: compress
+---
+<!doctype html>
+<html>
+<head>
+    <title>{% if page.id %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+
+    {% feed_meta %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#224149">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- font -->
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="{{ site.url }}">
+                <span id="drink"></span>
+                <span class="sr-only">changhwan.me</span>
+            </a>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+            <div class="copy">
+                &copy Changhwan Choi
+            </div>
+            <nav>
+                <span><a href="/about/">about</a></span>
+                <span><a href="{{ site.url }}">home</a></span>
+            </nav>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+    (function() {
+        var emojis = [
+            '🥛', '☕️', '🍵', '🍶', '🍾', '🍷', '🍸', '🍹', '🍺', '🍻', '🥂', '🥃', '🥤',
+        ];
+
+        (function update() {
+            var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+            document.getElementById("drink").innerHTML = emoji;
+            setTimeout(update, 10 * 1000);
+        })();
+    })();
+
+    (function() {
+        function rotate() {
+            var deg = window.scrollY % (360 * 4) / 4;
+            var elem = document.getElementById("drink");
+
+            elem.style.transform = 'rotate(' + deg + 'deg) perspective(0)'; 
+        }
+
+        window.addEventListener('scroll', rotate);
+    })();
+    </script>
+</body>
+</html>

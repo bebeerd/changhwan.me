@@ -1,0 +1,561 @@
+$color-light: #b5b9bc;
+$color-foreground: #454F58;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: "Spoqa Han Sans", sans-serif;
+  color: $color-foreground;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+::selection {
+  background-color: #ffffcc;
+  // color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 100%;
+  background-color: #ffffff;
+}
+
+/**
+* Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+        ========================================================================== */
+
+/**
+    * Remove the border on images inside links in IE 10.
+    */
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+/**
+    * Add the correct display in IE 10.
+    */
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/**
+    * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+    * aspect ratio.
+    */
+.img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/**
+    * Table
+    */
+table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 0.0625rem solid #cbcbcb;
+}
+
+table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+
+table td,
+table th {
+  border-left: 0.0625rem solid #cbcbcb; /*  inner column border */
+  border-width: 0 0 0 0.0625rem;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible; /*to make ths where the title is really long work*/
+  padding: 0.5em 1em; /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+    there's a rowspan on the first cell. Case added to the tests. issue#432 */
+table td:first-child,
+table th:first-child {
+  border-left-width: 0;
+}
+
+table thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/*
+    striping:
+    even - #fff (white)
+    odd  - #f2f2f2 (light gray)
+    */
+table td {
+  background-color: transparent;
+}
+.table td {
+  background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+.table tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+.table td {
+  border-bottom: 0.0625rem solid #cbcbcb;
+}
+.table tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
+/* HORIZONTAL BORDERED TABLES */
+
+.table td,
+.table th {
+  border-width: 0 0 0.0625rem 0;
+  border-bottom: 0.0625rem solid #cbcbcb;
+}
+.table tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/**
+    * Correct the font size and margin on `h1` elements within `section` and
+    * `article` contexts in Chrome, Firefox, and Safari.
+    */
+h1 {
+  font-size: 2rem;
+  margin: 2rem 0 9rem;
+}
+
+h2 {
+  font-size: 1.55rem;
+  margin: 2rem 0;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+h6 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: $color-light;
+  // transition: all 0.05s ease;
+}
+
+/*
+a[target=_blank] {
+
+  &::after {
+    content: ' \29C9';
+    font-size: 0.8rem;
+  }
+}
+*/
+
+a:hover {
+  color: $color-foreground;
+}
+
+/* Layout */
+.wrapper {
+  header {
+    position: fixed;
+    padding: 3rem;
+
+    a {
+      font-size: 3rem;
+
+      &:hover {
+        text-shadow: 0 0 0.25rem $color-light;
+      }
+    }
+  }
+
+  main, footer {
+    margin: 0 auto;
+    max-width: 32.5rem;
+  }
+
+  main {
+    padding-top: 10rem;
+  }
+
+  footer {
+    padding: 6rem 0 3rem ;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+/* list */
+.nav-list {
+  > .title {
+    margin: 3rem 0 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    // font-weight: 400;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .year {
+      flex-grow: 1;
+    }
+  }
+
+  .link {
+    margin: 1.25rem 0;
+    display: flex;
+    text-decoration: none;
+    color: lighten($color-foreground, 20%);
+
+    &.active {
+      font-style: italic;
+    }
+
+    .title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      align-self: stretch;
+      transition: inherit;
+    }
+
+    .spacer {
+      border: 0;
+      border-top: 0.0625rem dotted currentColor;
+      flex: 1 0 0.5rem;
+      align-self: flex-end;
+      margin: 0 0.5rem;
+      height: 0.7rem;
+      transition: inherit;
+    }
+
+    .date {
+      align-self: flex-end;
+      transition: inherit;
+    }
+
+    &:hover {
+      color: $color-foreground;
+
+      .spacer {
+        border-top: 0.0625rem solid currentColor;
+      }
+    }
+  }
+}
+
+.nav-link {
+  margin: 6rem 0 0;
+  display: flex;
+
+  .link {
+    color: lighten($color-foreground, 20%);
+
+    &:hover {
+      color: $color-foreground;
+    }
+  }
+
+  .next {
+    margin-right: auto;
+  }
+
+  .prev {
+    margin-left: auto;
+  }
+}
+
+article {
+  font-size: 1rem;
+
+  a {
+    border-bottom: 0.0625rem solid $color-light;
+    padding-bottom: 0.125rem;
+    color: #6080c0;
+
+    &:hover {
+      color: rgb(90, 117, 136);
+      background-color: lighten($color-light, 20%);
+    }
+  }
+
+  p {
+    line-height: 2em;
+    margin: 1.5rem 0;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 4rem 0 2rem;
+  }
+  
+  h3 {
+    margin: 3rem 0 1.8rem;
+  }
+  
+  h4,
+  h5,
+  h6 {
+    margin: 2.4rem 0 1.8rem;
+  }
+  
+  ul,
+  ol {
+    padding-left: 2rem;
+    margin: 2rem 0;
+  }
+  
+  ul ul,
+  ol ol,
+  ul ol,
+  ol ul {
+    margin: 0;
+  }
+  
+  ul li,
+  ol li {
+    line-height: 1.8rem;
+  }
+  
+  blockquote {
+    margin: 1.8rem 0 1.8rem 1.8rem;
+    padding-left: 1rem;
+    border-left: 0.1875rem solid #e0e6eb;
+  }
+  
+  blockquote blockquote {
+    margin: 0.8rem 0 0.8rem 0.8rem;
+  }
+  
+  /**
+      * Code
+      */
+  pre,
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  pre {
+    overflow-x: auto;
+  }
+  
+  code {
+    margin: 0 0.125rem;
+    padding: 0.125rem 0.1875rem;
+    background: #f8f8f8;
+    border: 0.0625rem solid #d0d4d9;
+    border-radius: 0.25rem;
+    line-height: 1;
+  }
+  
+  div.highlight {
+    border-radius: 0.25rem;
+  }
+  
+  pre.highlight {
+    padding: 1rem;
+    border: 0;
+    line-height: 1.2;
+    border-radius: 0.25rem;
+  }
+  
+  pre.highlight code {
+    font-size: 0.9rem !important;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+  
+  /**
+  * Figure
+  */
+  figure {
+    margin: 2rem 0;
+  }
+  
+  figure img {
+    max-width: 100%;
+  }
+  
+  figure figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: $color-light;
+  }
+
+  .post-meta {
+    margin: 3rem 0;
+    font-size: 0.875rem;
+    color: $color-light;
+  }
+}
+
+hr {
+  width: 6rem;
+  border: 0;
+  height: 0.0625rem;
+  border-bottom: 1px solid $color-light;
+  margin: 6rem 0;
+}
+
+/* Logo */
+#drink {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 3rem;
+
+  // transform-origin: 1.5rem;
+  // -webkit-transform-origin: 1.5rem;
+  // -moz-transform-origin: 1.5rem;
+  // -ms-transform-origin: 1.5rem;
+  // -o-transform-origin: 1.5rem;
+}
+
+/**
+* Media Queries
+*/
+@media (max-width: 44.5rem) {
+  h1 {
+    margin: 2rem 0 6rem;
+  }
+
+  .wrapper {
+    header {
+      position: relative;
+      padding: 1.5rem 0 0 1.5rem;
+      margin-bottom: 3rem;
+
+      a {
+        font-size: 3rem;
+      }
+    }
+    main, footer {
+      margin: 0 1.5rem;
+      max-width: 100%;
+    }
+
+    main {
+      padding-top: 0;
+    }
+  }
+
+  article figure {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    width:100vw;
+  }
+  article .image {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    max-width: 100vw;
+  }
+}
+
+.nav-link {
+  margin: 3rem 0 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% comment %}
+{% for post in site.posts limit:1 %}
+    {% assign page = post %}
+{% endfor %}
+
+{% include article.html %}
+{% endcomment %}
+
+{%- include list.html %}

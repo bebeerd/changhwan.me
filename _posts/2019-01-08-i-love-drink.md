@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I love drink
-date: 2019-01-08T02:56:43Z09:00
+date: 2019-01-08 02:56:43 +0900
 ---
 
 You may think that I am an alcoholic, but I'm not. Yes, I love drinking, but I am not addicted to it. Loving something and being addicted to it is entirely different. Actually, the word "drink" I use means not only drinking alcohol but also drinking water, drinking tea, drinking coffee, etc. The feeling of cold liquid moving through the throat, that's what I love so much.
@@ -32,6 +32,6 @@ And I felt satisfied.
 
 👼
 
-Ah by the way, I like beer most among alcohols, especially [Pilsner Urquell](https://en.wikipedia.org/wiki/Pilsner_Urquell){:target="_blank"} and [Kilkenny](https://en.wikipedia.org/wiki/Kilkenny_(beer)){:target="_blank"}. Don't worry. You can be my friend if you don't like these. 
+Ah by the way, I like beer most among alcohols, especially [Pilsner Urquell](https://en.wikipedia.org/wiki/Pilsner_Urquell){:target="_blank"} and [Kilkenny](https://en.wikipedia.org/wiki/Kilkenny_(beer)){:target="_blank"}. Don't worry. You can be my friend if you don't like these.
 
 I love drink. You know that 👍

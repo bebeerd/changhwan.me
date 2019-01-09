@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spin me round
-date: 2019-01-10T03:04:03Z09:00
+date: 2019-01-10 03:04:03 +0900
 ---
 
 {% include youtube.html width=50 height=35 url="https://www.youtube.com/embed/PGNiXGX2nLU?start=61" %}
@@ -22,7 +22,7 @@ Anyway, here's some code.
         var deg = window.scrollY % (360 * 4) / 4;
         var elem = document.getElementById("drink");
 
-        elem.style.transform = 'rotate(' + deg + 'deg) perspective(0)'; 
+        elem.style.transform = 'rotate(' + deg + 'deg) perspective(0)';
     }
 
     window.addEventListener('scroll', rotate);
